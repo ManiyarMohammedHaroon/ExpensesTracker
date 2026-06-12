@@ -22,7 +22,7 @@ const Register = () => {
         setError('');
         setMessage('');
         try {
-            const res = await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/auth/register`, formData);
+            const res = await axios.post(`${import.meta.env.VITE_API_URL || ''}/api/auth/register`, formData);
             setMessage('Registration successful! Redirecting to login...');
             setTimeout(() => navigate('/login'), 2000);
         } catch (err) {
